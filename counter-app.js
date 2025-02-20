@@ -76,8 +76,8 @@ export class CounterApp extends DDDSuper(I18NMixin(LitElement)) {
     <div class="wrapper">
       <div class="counter">${this.count}</div>
         <div class="buttons">
-          <button @click="${this.increase}">Add 1</button>
-          <button @click="${this.decrease}">Minus 1</button>
+          <button @click="${this.count.increase}">Add 1</button>
+          <button @click="${this.count.decrease}">Minus 1</button>
         </div>
     </div>`;
   }
