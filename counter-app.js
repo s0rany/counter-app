@@ -19,6 +19,7 @@ export class CounterApp extends DDDSuper(I18NMixin(LitElement)) {
   }
 
   constructor() {
+    this.count = 0;
     super();
     this.title = "";
     this.t = this.t || {};
@@ -40,6 +41,7 @@ export class CounterApp extends DDDSuper(I18NMixin(LitElement)) {
     return {
       ...super.properties,
       title: { type: String },
+      count: {type: Number},
     };
   }
 
@@ -60,20 +62,24 @@ export class CounterApp extends DDDSuper(I18NMixin(LitElement)) {
       h3 span {
         font-size: var(--counter-app-label-font-size, var(--ddd-font-size-s));
       }
+      .counter {
+        font-size: var(--counter-app-label-font-size, var(--ddd-font-size-xxl));
+      }
     `];
   }
 
   // Lit render the HTML
   render() {
     return html`
-<div class="wrapper">
-  <h3><span>${this.t.title}:</span> ${this.title}</h3>
-  <slot></slot>
-  <button>Increase</button>
-  <p></p>
-  <button>Decrease</button>
-
-</div>`;
+    <div class="wrapper">
+      <h3><span>${this.t.title}:</span> ${this.title}</h3>
+      <slot></slot>
+      <div class="counter">${this.count}</div>
+        <div class="buttons">
+          <button>Add 1</button>
+          <button>Minus 1</button>
+        </div>
+    </div>`;
   }
 
   /**
