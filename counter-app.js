@@ -69,6 +69,10 @@ export class CounterApp extends DDDSuper(I18NMixin(LitElement)) {
 <div class="wrapper">
   <h3><span>${this.t.title}:</span> ${this.title}</h3>
   <slot></slot>
+  <button>Increase</button>
+  <p></p>
+  <button>Decrease</button>
+
 </div>`;
   }
 
