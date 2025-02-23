@@ -115,7 +115,7 @@ export class CounterApp extends DDDSuper(I18NMixin(LitElement)) {
     if (super.updated) {
       super.updated(changedProperties);
     }
-    if (changedProperties.has("count")) {
+    if (changedProperties.has('count')) {
       // do your testing of the value and make it rain by calling makeItRain
       if (this.count === "21")
       {
@@ -125,7 +125,6 @@ export class CounterApp extends DDDSuper(I18NMixin(LitElement)) {
      
     }
   }
-
   makeItRain() {
     // this is called a dynamic import. It means it won't import the code for confetti until this method is called
     // the .then() syntax after is because dynamic imports return a Promise object. Meaning the then() code
