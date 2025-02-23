@@ -77,9 +77,6 @@ export class CounterApp extends DDDSuper(I18NMixin(LitElement)) {
       h3 span {
         font-size: var(--counter-app-label-font-size, var(--ddd-font-size-s));
       }
-      limit {
-
-      }
       .counter {
         font-size: var(--counter-app-label-font-size, var(--ddd-font-size-xxl));
       }
