@@ -58,6 +58,12 @@ export class CounterApp extends DDDSuper(I18NMixin(LitElement)) {
       :host([count = "21"]) {
         color: var(--ddd-theme-default-athertonViolet);
       }
+      :host([count="${this.min}"]) {
+        color: red; 
+      }
+      :host([count="${this.max}"]) {
+        color: red; 
+      }
       :host {
         display: block;
         color: var(--ddd-theme-primary);
@@ -70,6 +76,9 @@ export class CounterApp extends DDDSuper(I18NMixin(LitElement)) {
       }
       h3 span {
         font-size: var(--counter-app-label-font-size, var(--ddd-font-size-s));
+      }
+      limit {
+
       }
       .counter {
         font-size: var(--counter-app-label-font-size, var(--ddd-font-size-xxl));
