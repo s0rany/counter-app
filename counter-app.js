@@ -59,10 +59,10 @@ export class CounterApp extends DDDSuper(I18NMixin(LitElement)) {
         color: var(--ddd-theme-default-athertonViolet);
       }
       :host([count="${this.min}"]) {
-        color: red; 
+        color: var(--ddd-theme-default-original87Pink); 
       }
       :host([count="${this.max}"]) {
-        color: red; 
+        color: var(--ddd-theme-default-original87Pink); 
       }
       :host {
         display: block;
