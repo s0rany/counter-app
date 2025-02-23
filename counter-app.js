@@ -58,13 +58,9 @@ export class CounterApp extends DDDSuper(I18NMixin(LitElement)) {
       :host([count = "21"]) {
         color: var(--ddd-theme-default-athertonViolet);
       }
-      .limit {
-        color: var(--ddd-theme-default-athertonViolet);
-      }
-      
       :host {
         display: block;
-        color: var(--ddd-theme-primary);
+        color: var(--counter-color, var(--ddd-theme-primary));
         background-color: var(--ddd-theme-accent);
         font-family: var(--ddd-font-navigation);
       }
@@ -119,7 +115,12 @@ export class CounterApp extends DDDSuper(I18NMixin(LitElement)) {
     }
     if (changedProperties.has('count')) {
       // do your testing of the value and make it rain by calling makeItRain
-      
+      if (this.count === this.max || this.count === this.min) {
+        this.style.setProperty('--counter-color', 'var(--ddd-theme-default-athertonViolet)');
+      }
+      else {
+        this.style.setProperty('--counter-color', 'var(--ddd-theme-primary)');
+      }
       if (this.count === 21)
       {
         this.makeItRain();
