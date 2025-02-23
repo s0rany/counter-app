@@ -75,13 +75,14 @@ export class CounterApp extends DDDSuper(I18NMixin(LitElement)) {
         font-size: var(--counter-app-label-font-size, var(--ddd-font-size-xxl));
       }
       .buttons  button{
-        background-color: blue;
+        background-color: var(--ddd-theme-default-skyLight);
+        ;
       }
       .buttons button:hover {
-        background-color: red;
+        background-color: var(--ddd-theme-default-creekTeal);
       }
       .buttons button:focus {
-        background-color: green;
+        background-color: var(--ddd-theme-default-keystoneYellow);
       }
     `];
   }
