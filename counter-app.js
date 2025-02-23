@@ -115,7 +115,7 @@ export class CounterApp extends DDDSuper(I18NMixin(LitElement)) {
     }
     if (changedProperties.has('counter')) {
       // do your testing of the value and make it rain by calling makeItRain
-      if (this.count >= 10)
+      if (this.count == "21")
       {
         this.makeItRain();
       }
