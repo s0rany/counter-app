@@ -50,7 +50,13 @@ export class CounterApp extends DDDSuper(I18NMixin(LitElement)) {
   static get styles() {
     return [super.styles,
     css`
-      :host([count >= "10"]) {
+      :host([count = "10"]) {
+        color: var(--ddd-theme-default-athertonViolet);
+      }
+      :host([count = min]) {
+        color: var(--ddd-theme-default-athertonViolet);
+      }
+      :host([count = max]) {
         color: var(--ddd-theme-default-athertonViolet);
       }
       :host {
