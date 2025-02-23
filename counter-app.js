@@ -43,6 +43,8 @@ export class CounterApp extends DDDSuper(I18NMixin(LitElement)) {
     return {
       ...super.properties,
       count: {type: Number, reflect: true},
+      min: {type: Number, reflect: true},
+      max: {type: Number, reflect: true},
     };
   }
 
