@@ -80,14 +80,6 @@ export class CounterApp extends DDDSuper(I18NMixin(LitElement)) {
       }
     `];
   }
-
-  updated(changedProperties) {
-    super.updated(changedProperties);
-    
-  }
-
-  
-
   // Lit render the HTML
   render() {
     return html`
@@ -115,6 +107,10 @@ export class CounterApp extends DDDSuper(I18NMixin(LitElement)) {
     }
     if (changedProperties.has('counter')) {
       // do your testing of the value and make it rain by calling makeItRain
+      if (this.count >= 10)
+      {
+        this.makeItRain();
+      }
     }
   }
 
