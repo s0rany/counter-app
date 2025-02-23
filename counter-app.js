@@ -52,7 +52,10 @@ export class CounterApp extends DDDSuper(I18NMixin(LitElement)) {
   static get styles() {
     return [super.styles,
     css`
-      :host([count = "10"]) {
+      :host([count = "18"]) {
+        color: var(--ddd-theme-default-athertonViolet);
+      }
+      :host([count = "21"]) {
         color: var(--ddd-theme-default-athertonViolet);
       }
       :host {
